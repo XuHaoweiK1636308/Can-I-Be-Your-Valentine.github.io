@@ -5,26 +5,37 @@ function getRandomNumber(min, max) {
 // movement function can stay but won't be used
 function moveNonButton() {}
 
+const img = document.querySelector('img');
+const originalGif = "img/cat-133_256.gif";
+
 function initialize() {
-    // ❌ movement disabled
-    // document.getElementById('nonButton').addEventListener('mouseenter', moveNonButton);
-    // window.addEventListener('resize', moveNonButton);
+    const nonButton = document.getElementById('nonButton');
+    const ouiButton = document.getElementById('ouiButton');
 
-    // ✅ image hover effects stay
-    document.getElementById('nonButton').addEventListener('mouseenter', function() {
-        img.src = 'img/cats-sad.gif';
+    // Hover effects
+    nonButton.addEventListener('mouseenter', () => {
+        img.src = "img/cats-sad.gif";
     });
 
-    document.getElementById('ouiButton').addEventListener('mouseenter', function() {
-        img.src = 'img/love-cat.gif';
+    ouiButton.addEventListener('mouseenter', () => {
+        img.src = "img/love-cat.gif";
     });
 
-    // ✅ click "No" → go to sad page
-    document.getElementById('nonButton').addEventListener('click', function() {
+    // Reset when mouse leaves buttons
+    nonButton.addEventListener('mouseleave', () => {
+        img.src = originalGif;
+    });
+
+    ouiButton.addEventListener('mouseleave', () => {
+        img.src = originalGif;
+    });
+
+    // Click "No" → sad page
+    nonButton.addEventListener('click', () => {
         window.location.href = "no.html";
     });
 }
 
-const img = document.querySelector('img');
 initialize();
+
 
