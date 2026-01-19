@@ -6,7 +6,7 @@ function getRandomNumber(min, max) {
 function moveNonButton() {}
 
 const img = document.querySelector('img');
-const originalGif = "img/cat-133_256.gif";
+const originalGif = "img/pleading-cat.gif";
 
 function initialize() {
     const nonButton = document.getElementById('nonButton');
@@ -37,5 +37,6 @@ function initialize() {
 }
 
 initialize();
+
 
 
