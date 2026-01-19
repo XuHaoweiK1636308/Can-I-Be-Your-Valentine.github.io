@@ -14,7 +14,7 @@ function initialize() {
 
     // Hover effects
     nonButton.addEventListener('mouseenter', () => {
-        img.src = "img/cats-sad.gif";
+        img.src = "img/cats-crying.gif";
     });
 
     ouiButton.addEventListener('mouseenter', () => {
@@ -37,6 +37,7 @@ function initialize() {
 }
 
 initialize();
+
 
 
 
