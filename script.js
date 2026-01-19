@@ -4,8 +4,8 @@ function getRandomNumber(min, max) {
 
 const img = document.querySelector("img");
 
-const originalGif = "img/cat-133_256.gif";   // default / pleading
-const sadGif = "img/cats-sad.gif";           // hover NO
+const originalGif = "./pleading-cat.gif";   // default / pleading
+const sadGif = "./cat-crying.gif";           // hover NO
 const loveGif = "img/cat-cats.gif";          // hover YES (UPDATED)
 
 const nonButton = document.getElementById("nonButton");
@@ -31,6 +31,7 @@ if (nonButton) {
         window.location.href = "no.html";
     });
 }
+
 
 
 
