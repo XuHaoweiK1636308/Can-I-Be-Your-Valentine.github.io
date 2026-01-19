@@ -54,4 +54,14 @@ h1 {
     font-family: "Dancing Script", cursive;
     font-weight: bold;
     font-size: 4rem;
+    margin: 10px 0;   /* ensures clean spacing between lines */
 }
+
+/* ✅ NEW: for multi-line "Yes" page text */
+.textSee {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin: 8px 0;
+}
+
