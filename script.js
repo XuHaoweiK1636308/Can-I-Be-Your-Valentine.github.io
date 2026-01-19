@@ -2,43 +2,36 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const img = document.querySelector('img');
+const img = document.querySelector("img");
 
-// GIF states (these files are in your repo ROOT)
-const originalGif = "pleading-cat.gif";   // default
-const cryingGif = "cat-crying.gif";       // hover NO
-const loveGif = "img/cat-cats.gif";       // hover YES (this one is inside /img)
+const originalGif = "img/cat-133_256.gif";   // default / pleading
+const sadGif = "img/cats-sad.gif";           // hover NO
+const loveGif = "img/cat-cats.gif";          // hover YES (UPDATED)
 
-function initialize() {
-  const nonButton = document.getElementById('nonButton');
-  const ouiButton = document.getElementById('ouiButton');
+const nonButton = document.getElementById("nonButton");
+const ouiButton = document.getElementById("ouiButton");
 
-  // Hover YES → love cat
-  ouiButton.addEventListener('mouseenter', () => {
-    img.src = loveGif;
-  });
-
-  // Hover NO → crying cat
-  nonButton.addEventListener('mouseenter', () => {
-    img.src = cryingGif;
-  });
-
-  // Reset when leaving buttons
-  ouiButton.addEventListener('mouseleave', () => {
-    img.src = originalGif;
-  });
-
-  nonButton.addEventListener('mouseleave', () => {
-    img.src = originalGif;
-  });
-
-  // Click NO → go to no.html
-  nonButton.addEventListener('click', () => {
-    window.location.href = "no.html";
-  });
+if (ouiButton) {
+    ouiButton.addEventListener("mouseenter", () => {
+        img.src = loveGif;
+    });
+    ouiButton.addEventListener("mouseleave", () => {
+        img.src = originalGif;
+    });
 }
 
-initialize();
+if (nonButton) {
+    nonButton.addEventListener("mouseenter", () => {
+        img.src = sadGif;
+    });
+    nonButton.addEventListener("mouseleave", () => {
+        img.src = originalGif;
+    });
+    nonButton.addEventListener("click", () => {
+        window.location.href = "no.html";
+    });
+}
+
 
 
 
