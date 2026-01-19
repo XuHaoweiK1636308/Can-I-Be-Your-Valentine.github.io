@@ -62,4 +62,15 @@ h1 {
 
 #textSee {
     width: 25rem;
+
+}
+.retry-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+button {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.4rem;
 }
