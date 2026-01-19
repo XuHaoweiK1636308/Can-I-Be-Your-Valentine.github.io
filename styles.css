@@ -1,52 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-body, html {
+/* Page setup */
+html, body {
     height: 100%;
     margin: 0;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: wheat; /* move background here instead of * */
+    text-align: center;
 }
 
-* {
-    background-color: wheat;
-}
-
+/* Main container */
 .container {
+    min-height: 100vh;              /* ensures true vertical centering */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 28px;                      /* evenly spaces title, image, text, button */
     text-align: center;
-    height: 100%;
+    background-color: wheat;        /* keeps consistent background */
 }
 
-.button-container {
-    margin-top: 20px;
+/* Title */
+h1 {
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: 4rem;
 }
 
-button {
-    margin: 10px;
-    background-color: #000000;
-    padding: 10px 20px;
-    border: none;
-    transition: left 1s ease, top 1s ease;
-    border-radius: 25%;
-    color: white;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #555;
-}
-
+/* Main page title id (optional fine-tune) */
 #textMain {
-    margin-top: 20px;
+    margin: 0;
 }
 
+/* Images */
 img {
+    display: block;
+    margin: 0 auto;
     width: 260px;
     height: 300px;
+    background-color: transparent;
 }
 
 #dancingCat {
@@ -54,23 +53,39 @@ img {
     height: 75%;
 }
 
-h1 {
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    font-size: 4rem;
-}
-
-#textSee {
-    width: 25rem;
-
-}
+/* Text under the cat (no.html) */
 .retry-text {
+    margin: 0;
     font-family: "Dancing Script", cursive;
     font-size: 2rem;
-    margin-top: 20px;
 }
 
+/* Button area */
+.button-container {
+    margin: 0; /* spacing handled by .container gap */
+    background-color: transparent;
+}
+
+/* Buttons */
 button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25%;
+    color: white;
+    background-color: #000000;
     font-family: "Dancing Script", cursive;
     font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
+
+button:hover {
+    background-color: #555;
+}
+
+/* Optional width helper you already had */
+#textSee {
+    width: 25rem;
+}
+
