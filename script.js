@@ -7,7 +7,7 @@ const img = document.querySelector('img');
 // GIF states (these files are in your repo ROOT)
 const originalGif = "pleading-cat.gif";   // default
 const cryingGif = "cat-crying.gif";       // hover NO
-const loveGif = "img/love-cat.gif";       // hover YES (this one is inside /img)
+const loveGif = "img/cat-cats.gif";       // hover YES (this one is inside /img)
 
 function initialize() {
   const nonButton = document.getElementById('nonButton');
@@ -39,6 +39,7 @@ function initialize() {
 }
 
 initialize();
+
 
 
 
